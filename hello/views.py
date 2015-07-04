@@ -1,7 +1,7 @@
 import requests
 import os
 import psycopg2
-import urlparse
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Greeting
