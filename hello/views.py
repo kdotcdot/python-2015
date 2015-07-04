@@ -39,8 +39,7 @@ def index(request):
     return HttpResponse('<pre>' + r.text + '</pre>')
 
 def db(request):
-	number = 0
-    greeting = number + 1
+    greeting = Greeting()
     greeting.save()
 
     greetings = Greeting.objects.all()
