@@ -1,8 +1,9 @@
 import requests
 import os
+import psycopg2
+import urlparse
 from django.shortcuts import render
 from django.http import HttpResponse
-
 from .models import Greeting
 
 stock = {
@@ -38,8 +39,8 @@ def index(request):
     return HttpResponse('<pre>' + r.text + '</pre>')
 
 def db(request):
-
-    greeting = Greeting()
+	number = 0
+    greeting = number + 1
     greeting.save()
 
     greetings = Greeting.objects.all()
