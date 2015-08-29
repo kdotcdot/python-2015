@@ -20,9 +20,4 @@ def db(request):
     greeting.save()
     greetings = Greeting.objects.all()
     
-    #p = Question(question_text="Blade Project", pub_date="KC")
-    
-    #p.save()
-	#projects = Project.objects.all()
-	
     return render(request, 'db.html', {'greetings': greetings})
