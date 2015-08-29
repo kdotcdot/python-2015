@@ -8,10 +8,10 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-    #r = requests.get('http://httpbin.org/status/418')
-    print "poop"
+    #p = requests.get('http://httpbin.org/status/418')
+    #print p.text
     times = int(os.environ.get('TIMES',3))
-    return HttpResponse('<pre>' + r.text + '</pre>')
+    return HttpResponse('<pre>' + 'poop' + '</pre>')
 
 def db(request):
     greeting = Greeting()
