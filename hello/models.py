@@ -4,17 +4,6 @@ from django.db import models
 class Greeting(models.Model):
     when = models.DateTimeField('date created', auto_now_add=True)
 
-#Create a table for projects and to-dos
-#class Project(models.Model):
-# 	name = models.CharField(max_length=50)
-# 	owner = models.CharField(max_length=50)
-# 
-# class Todo(models.Model):
-# 	project_name = models.ForeignKey(Project)
-# 	title = models.CharField(max_length=100)
-# 	due_date = models.DateField()
-# 	order = models.IntegerField()
-
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
